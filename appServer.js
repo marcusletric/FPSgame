@@ -4,7 +4,7 @@ var path = require("path");
 var fs = require("fs");
 const PORT = process.env.PORT;
 
-//require('./gameServer.js');
+require('./gameServer.js');
 
 var server = http.createServer(handleRequest);
 

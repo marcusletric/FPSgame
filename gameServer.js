@@ -1,8 +1,8 @@
-var ws = require("ws");
+var ws = require("nodejs-websocket");
 var Game = require('./gameInstance.js');
 
 const WSPORT=9001;
-const WSHOST="10.1.14.107";
+const WSHOST=process.env.HOST;
 
 var queueTimer;
 var queueTime=120000;
