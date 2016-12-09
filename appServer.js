@@ -4,13 +4,10 @@ var path = require("path");
 var fs = require("fs");
 const PORT = process.env.PORT;
 
+var server = express();
+
+server.use(handleRequest).listen(PORT);
 require('./gameServer.js');
-
-var server = http.createServer(handleRequest);
-
-server.listen(PORT, function(){
-    console.log("Server listening on: %s", PORT);
-});
 
 function commandSent(){
     update = true;

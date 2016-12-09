@@ -1,8 +1,5 @@
-var ws = require("nodejs-websocket");
+var SocketServer = require("ws").Server;
 var Game = require('./gameInstance.js');
-
-const WSPORT=process.env.PORT;
-const WSHOST="localhost";
 
 var queueTimer;
 var queueTime=120000;
@@ -21,7 +18,9 @@ var self = this;
 var connections = {};
 var connIncrementID = 10;
 
-var gameServer = ws.createServer(function (conn) {
+var gameServer = new SocketServer(server);
+
+gameServer.on('connection',function (conn) {
     console.log('Player connected');
 
     conn.clientID = playerIncrementID ;
@@ -52,9 +51,9 @@ var gameServer = ws.createServer(function (conn) {
 
     connIncrementID++;
     playerIncrementID++;
-}).listen();
+});
 
-console.log("Gameserver started on " + WSHOST + ":" + WSPORT);
+console.log("Gameserver started");
 
 this.addPlayer = function(player) {
     if(!player || !player.id || typeof(player.id) != "number"){
