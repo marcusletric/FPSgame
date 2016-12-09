@@ -19,7 +19,7 @@ module.exports = function(server){
 	var connections = {};
 	var connIncrementID = 10;
 
-	var gameServer = new SocketServer(server);
+	var gameServer = new SocketServer({ server });
 
 	gameServer.on('connection',function (conn) {
 		console.log('Player connected');
