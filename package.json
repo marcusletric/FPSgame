@@ -28,8 +28,8 @@
     "rimraf": "^2.4.0",
     "wiredep": "^2.2.2",
     "bower": "*",
-    "http" : "*",
-    "nodejs-websocket" : "*",
+    "express" : "*",
+    "ws" : "*",
     "url" : "*",
     "path" : "*",
     "querystring" : "*"
