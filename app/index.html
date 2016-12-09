@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="fps_game" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="fps_game" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="fps_game" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="fps_game" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FPS Game | AngularJS + three.js</title>
+  <meta name="description" content="Client application for bb8_control system">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<!-- Library source includes -->
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/jquery/src/sizzle/dist/sizzle.min.js"></script>
+
+<!-- Dev source includes -->
+  <script src="src/app.js"></script>
+  <script src="src/common/commonModule.js"></script>
+  <script src="src/game/gameModule.js"></script>
+  <script src="src/generators/generatorsModule.js"></script>
+  <script src="src/loaders/loaderModule.js"></script>
+  <script src="src/network/networkModule.js"></script>
+  <script src="src/player/playerModule.js"></script>
+  <script src="src/redering/renderingModule.js"></script>
+  <script src="src/common/services/eventService.js"></script>
+  <script src="src/common/services/Helper3D.js"></script>
+  <script src="src/game/directives/gameConfig.js"></script>
+  <script src="src/game/directives/gameStats.js"></script>
+  <script src="src/game/model/gameConfig.js"></script>
+  <script src="src/game/services/gameDriver.js"></script>
+  <script src="src/game/services/networkGameDriver.js"></script>
+  <script src="src/generators/services/multiplyGenerator.js"></script>
+  <script src="src/library/threejs/three.min.js"></script>
+  <script src="src/loaders/services/resourceFetcher.js"></script>
+  <script src="src/loaders/services/sceneLoader.js"></script>
+  <script src="src/loaders/services/sceneReplacements.js"></script>
+  <script src="src/network/services/webSocketService.js"></script>
+  <script src="src/player/directives/keyboardControl.js"></script>
+  <script src="src/player/directives/mouseControl.js"></script>
+  <script src="src/player/services/playerFactory.js"></script>
+  <script src="src/redering/ctrl/renderingCtrl.js"></script>
+  <script src="src/redering/directive/ngWebgl.js"></script>
+  <script src="src/redering/model/renderModelFactory.js"></script>
+  <script src="src/library/threejs/animation/Animation.js"></script>
+  <script src="src/library/threejs/animation/AnimationHandler.js"></script>
+  <script src="src/library/threejs/animation/KeyFrameAnimation.js"></script>
+  <script src="src/library/threejs/loaders/ColladaLoader.js"></script>
+
+
+  <!--[if lt IE 7]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <div class="app_canvas">
+      <div ui-view></div>
+  </div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+
+
+</body>
+</html>
