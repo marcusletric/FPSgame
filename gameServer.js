@@ -250,9 +250,9 @@ module.exports = function(server){
 	}
 
 	function broadcast(data){
-		gameServer.connections.forEach(function (conn) {
-			conn.sendText(JSON.stringify(data));
-		});
+		for(key in connections){
+			connections[key].sendText(JSON.stringify(data));
+		}
 	}
 
 	startQueue();
