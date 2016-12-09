@@ -1,4 +1,4 @@
-var ws = require("nodejs-websocket");
+var ws = require("ws");
 var Game = require('./gameInstance.js');
 
 const WSPORT=9001;

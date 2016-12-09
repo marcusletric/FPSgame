@@ -29,7 +29,7 @@
     "wiredep": "^2.2.2",
     "bower": "*",
     "http" : "*",
-    "nodejs-websocket" : "*",
+    "ws" : "*",
     "url" : "*",
     "path" : "*",
     "querystring" : "*"
