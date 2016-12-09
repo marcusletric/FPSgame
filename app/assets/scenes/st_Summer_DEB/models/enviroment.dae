@@ -2767,7 +2767,7 @@
       <init_from>./images/0_ground_asphalt_old_07.png</init_from>
     </image>
     <image id="Grass_jpg">
-      <init_from>./images/2_Grass.jpg</init_from>
+      <init_from>./images/2_Grass.JPG</init_from>
     </image>
     <image id="street_jpg">
       <init_from>./images/1_street.jpg</init_from>
