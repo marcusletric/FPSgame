@@ -7,7 +7,7 @@ const PORT = process.env.PORT;
 var server = express();
 
 server.use(handleRequest).listen(PORT);
-require('./gameServer.js');
+require('./gameServer.js')(server);
 
 function commandSent(){
     update = true;
