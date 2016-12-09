@@ -10,7 +10,6 @@
     
   },
   "scripts": {
-    "install": "bower install",
     "start": "node appServer.js"
   }
 }
