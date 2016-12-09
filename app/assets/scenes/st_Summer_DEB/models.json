@@ -1,0 +1,122 @@
+{
+  "scene_models": [
+    {
+      "model_name": "lakotomb",
+      "model_src": "/models/lakotomb.dae",
+      "generators": [
+		{
+			"function": "multiply",
+			"parameters": [3,3,1]
+		},
+		{
+		  "function": "multiply",
+		  "parameters": [3,2,1],
+		  "postTransform": [-1,0,0, -20,
+							0,1, 0, 0.1,
+							0,0,-1,25,
+							0,0, 0, 1]
+		},
+		{
+			"function": "multiply",
+			"parameters": [1,2,1],
+			"postTransform": [0,0,1, -63,
+			 				  0,1, 0, 0,
+                              -1,0, 0,-4.8,
+                              0,0, 0, 1]
+		},
+		{
+			"function": "multiply",
+			"parameters": [3,2,1],
+			"postTransform": [0,0,-1, -25.9,
+							  0,1, 0, 0.1,
+                              1,0, 0,-47.2,
+                              0,0, 0, 1]
+		},
+		{
+			"function": "multiply",
+			"parameters": [3,3,1],
+			"postTransform": [0,0,1, -54,
+							  0,1, 0, 0,
+							  -1,0, 0,-47.2,
+							  0,0, 0, 1]
+		}
+	  ]
+    },
+	{
+	  "model_name": "player",
+	  "model_src": "/players/player.dae",
+	  "onlyLoad" : true
+	},
+	{
+	  "model_name": "kornyezet",
+	  "model_src": "/models/enviroment.dae"
+	},
+    {
+      "model_name": "egbolt",
+      "model_src": "/models/scene.dae"
+    },
+    {
+	    "model_name": "spawnPoint",
+	    "THREE_object": "Object3D",
+		"THREE_object_params" : [],
+		"generators": [
+		  {
+				"function": "multiply",
+				"parameters": [1,1,1],
+				"postTransform":{
+				  "position" : [0,0,1],
+				  "rotation" : [0,180,0]
+				}
+			},
+			{
+				"function": "multiply",
+				"parameters": [1,1,1],
+				"postTransform":{
+				  "position" : [-20,0,23],
+				  "rotation" : [0,0,0]
+				}
+			},
+			{
+				"function": "multiply",
+				"parameters": [1,1,1],
+				"postTransform":{
+				  "position" : [10,0,10],
+				  "rotation" : [0,180,0]
+				}
+			},
+			{
+				"function": "multiply",
+				"parameters": [1,1,1],
+				"postTransform":{
+				  "position" : [-10,0,-10],
+				  "rotation" : [0,90,0]
+				}
+			},
+		  {
+			"function": "multiply",
+			"parameters": [1,1,1],
+			"postTransform":{
+			  "position" : [20,0,20],
+			  "rotation" : [0,90,0]
+			}
+		  },
+		  {
+			"function": "multiply",
+			"parameters": [1,1,1],
+			"postTransform":{
+			  "position" : [-63,0,-4.8],
+			  "rotation" : [0,90,0]
+			}
+		  },
+		  {
+			"function": "multiply",
+			"parameters": [1,1,1],
+			"postTransform":{
+			  "position" : [-28,0,-48],
+			  "rotation" : [0,90,0]
+			}
+		  }
+		]
+	}
+  ]
+}
