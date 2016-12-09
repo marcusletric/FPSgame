@@ -1,8 +1,8 @@
 var ws = require("nodejs-websocket");
 var Game = require('./gameInstance.js');
 
-const WSPORT=9001;
-const WSHOST="fpsgame.herokuapp.com";
+const WSPORT=process.env.PORT;
+const WSHOST="localhost";
 
 var queueTimer;
 var queueTime=120000;
