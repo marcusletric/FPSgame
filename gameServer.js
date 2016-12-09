@@ -52,7 +52,7 @@ var gameServer = ws.createServer(function (conn) {
 
     connIncrementID++;
     playerIncrementID++;
-}).listen(WSPORT);
+}).listen();
 
 console.log("Gameserver started on " + WSHOST + ":" + WSPORT);
 
