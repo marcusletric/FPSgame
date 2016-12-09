@@ -1,7 +1,7 @@
 var ws = require("nodejs-websocket");
 var Game = require('./gameInstance.js');
 
-const WSPORT=9001;
+const WSPORT=process.env.PORT;
 const WSHOST=process.env.HOST;
 
 var queueTimer;
