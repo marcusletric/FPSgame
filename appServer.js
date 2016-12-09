@@ -2,9 +2,9 @@ var http = require('http');
 var url = require("url");
 var path = require("path");
 var fs = require("fs");
-const PORT = 8080;
+const PORT = process.env.PORT;
 
-require('./gameServer.js');
+//require('./gameServer.js');
 
 var server = http.createServer(handleRequest);
 
