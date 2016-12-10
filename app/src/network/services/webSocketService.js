@@ -1,4 +1,4 @@
-angular.module('fps_game.network').service('webSocket', function($q,gameConfigModel,$cookies){
+angular.module('fps_game.network').service('webSocket', function($q,$location,gameConfigModel,$cookies){
     var self = this;
 
     var listeners = {};
@@ -44,8 +44,9 @@ angular.module('fps_game.network').service('webSocket', function($q,gameConfigMo
     }];
 
     this.connect = function(){
+		var HOST = $location.origin.replace(/^http/, 'ws')
 
-        gameServer =  new WebSocket(gameConfigModel.serverAddr);
+        gameServer =  new WebSocket(HOST);
 
         gameServer.onopen = function (event) {
             alive = true;
